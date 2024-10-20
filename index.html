@@ -3,10 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- <img src="logo.svg" alt="spotify-logo"> -->
+    <header>
+        <nav>
+            <ul>
+                <li class="flex align-center"><img src="logo.svg" alt="spotify-logo">Spotify</li>
+                <li>
+                    <div class="nav-widgets flex">
+                        <span>
+                            <img src="home.svg" alt="home" width="50">
+                        </span>
+                        <div class="flex">
+                            <img src="search.svg" width="50" alt="search">
+                            <input type="text" placeholder="What do you want to Play">
+                            <img src="browe-collections.svg" alt="browse-collections">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <section class="user-section">
+                    <img src="notification.svg" alt="notification">
+                    <div class="user-logo">
+                        V
+                    </div>
+                    </section>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container flex">
+            <div class="left">
+               <ul>
+                   <li>
+                       <div class="flex">
+                           <img src="library.svg" alt="library">
+                           <h2>Your Library</h2>
+                       </div>
+                   </li>
+                   <li><img src="add-folder.svg" alt="add-folder"></li>
+               </ul>
+            </div>
+            <div class="right">
+               <div class="spotifyArtists">
+                   <h1>Spotify Artists</h1>
+                   <div class="cardContainer">
+                       <div class="card">
+                           <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                           <section class="cardDetails">
+                               <h2>Pritam</h2>
+                               <p>Artist</p>
+                           </section>
+                           <div class="play">
+                            <img src="play-button-arrowhead.svg" alt="play">
+                           </div>
+                       </div>
+                   </div>
+                   <div class="playbar">
+                    <div class="songs-info">
+                    </div>
+                    <div class="song-buttons">
+                    <img src="rewind-button.svg" alt="previous">
+                    <img src="play.svg" alt="play">
+                    <img src="next.svg" alt="next">
+                    </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </main>
 </body>
+<script src="script.js"></script>
 </html>

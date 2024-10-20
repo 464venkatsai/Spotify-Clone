@@ -1,0 +1,17 @@
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.border{
+    border: 2px solid lightgreen !important;
+    margin: 1rem;
+}
+.box{
+    height: 1rem;
+    width: 1rem;
+}

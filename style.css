@@ -1,4 +1,237 @@
+:root{
+    --popfont : "Poppins", sans-serif;
+    --nunfont : "Nunito Sans", sans-serif;
+    --divbackground : #121212
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--nunfont);
+}
+ul li{
+    list-style: none;
+}
 body{
-    /* background-color: black; */
-    /* color: white; */
+    color: white;
+    width: 100vw;
+    background-color: black;
+}
+header{
+    padding: 0px 2rem;
+}
+main{
+    padding: 0px 2rem;
+}
+nav{
+    background-color: black;
+    width: 100%;
+    height: 4rem;
+}
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-row: 1;
+    grid-template-columns: 2.5fr 2.5fr 2fr;
+}
+nav ul li{
+    width: 100%;
+    font-size: large;
+    list-style: none;
+    height: 100%;
+    display: grid;
+}
+
+/* Navbar images styles */
+img[alt="spotify-logo"]{
+    width: 45px;
+    height: 35px;
+    margin-right: .5rem;
+}
+img[alt="search"]{
+    position: absolute;
+    left: 22px;
+    z-index: 1;
+}
+img[alt="browse-collections"]{
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    padding-left: .5rem;
+    border-left: 1.5px solid rgba(197, 197, 197, 0.541);
+}
+img[alt="notification"]{
+    width: 20px;
+    align-self: center;
+}
+img[alt="library"],img[alt="add-folder"]{
+    width: 20px;
+}
+input[type="text"]{
+    background-color: var(--divbackground);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    height: 70%;
+    color: white;
+    margin-left: .5rem;
+    padding-left: 3.5rem;
+}
+input[type="text"]::placeholder{
+    color: rgba(170, 170, 170, 0.696);
+}
+.nav-widgets{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.nav-widgets > div{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+.nav-widgets span{
+    display: grid;
+    place-items: center;
+    height: 70%;
+    background-color: var(--divbackground);
+    width: 3.3rem;
+    border-radius: 50%;
+    overflow: none;
+}
+.nav-widgets img{
+    width: 25px;
+}
+.user-section{
+    height: 100%;
+    align-self: center;
+    justify-self: end;
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-logo{
+    background-color: rgb(23, 137, 236);
+    border: .4rem solid  #1e1e1e;
+    display: flex;
+    width: 33px;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    border-radius: 100%;
+}
+nav img:hover,.user-logo:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+
+/* Home page left component  */
+.container{
+    width: 100%;
+}
+.left{
+    height: 89vh;
+    width: 38%;
+    margin-right: 0.4rem;
+    background-color: var(--divbackground);
+    border-radius: 10px;
+}
+.left > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+.left div > h2{
+    font-size: medium;
+    padding-left: .5rem;
+}
+.right{
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--divbackground);
+    max-height: 89vh;
+    position: relative;
+}
+::-webkit-scrollbar{
+    /* width: 10px; */
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px ;
+    background-color: rgba(255, 255, 255, 0.396);
+}
+.spotifyArtists{
+    padding-top: 2rem;
+    width: 100%;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--divbackground);
+}
+.spotifyArtists h1{
+    margin-left: 1.5rem;
+}
+.cardContainer{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid red;
+}
+.card{
+    border-radius: 8px;
+    width: max-content;
+    padding: 1rem;
+    position: relative;
+}
+.card:hover{
+    background-color: #202020 ;
+}
+.card > img{
+    /* border-radius: 50%; */
+    width: 12rem;
+}
+.cardDetails h2{
+    font-size: medium;
+}
+.cardDetails p{
+    font-size: small;
+}
+.play img{
+    width: .9rem;
+}
+.play{
+    width: min-content;
+    padding: .8rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: #1fdf64;
+    position: absolute;
+    cursor: pointer;
+    bottom: 4rem;
+    right: 2rem;
+}
+.playbar{
+    border: 0.1px solid wheat;
+    left: 0;
+    right: 0;
+    position: absolute;
+    padding: 12px 1rem;
+    bottom: 0;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.song-buttons{
+    margin: 0px 1rem;
+}
+.song-buttons > img{ 
+    width: 1.5rem;
 }
