@@ -15,3 +15,6 @@
     height: 1rem;
     width: 1rem;
 }
+.invert{
+    filter: brightness(0) invert(1);
+}

@@ -14,22 +14,22 @@
     <header>
         <nav>
             <ul>
-                <li class="flex align-center"><img src="logo.svg" alt="spotify-logo">Spotify</li>
+                <li class="flex align-center"><img src="/images/logo.svg" alt="spotify-logo">Spotify</li>
                 <li>
                     <div class="nav-widgets flex">
                         <span>
-                            <img src="home.svg" alt="home" width="50">
+                            <img src="/images/home.svg" alt="home" width="50">
                         </span>
                         <div class="flex">
-                            <img src="search.svg" width="50" alt="search">
+                            <img src="/images/search.svg" width="50" alt="search">
                             <input type="text" placeholder="What do you want to Play">
-                            <img src="browe-collections.svg" alt="browse-collections">
+                            <img src="/images/browe-collections.svg" alt="browse-collections">
                         </div>
                     </div>
                 </li>
                 <li>
                     <section class="user-section">
-                    <img src="notification.svg" alt="notification">
+                    <img src="/images/notification.svg" alt="notification">
                     <div class="user-logo">
                         V
                     </div>
@@ -41,15 +41,19 @@
     <main>
         <div class="container flex">
             <div class="left">
-               <ul>
+               <ul class="library-container">
                    <li>
                        <div class="flex">
-                           <img src="library.svg" alt="library">
+                           <img src="/images/library.svg" alt="library">
                            <h2>Your Library</h2>
                        </div>
-                   </li>
-                   <li><img src="add-folder.svg" alt="add-folder"></li>
-               </ul>
+                    </li>
+                    <li><img src="/images/add-folder.svg" alt="add-folder"></li>
+                </ul>
+                <div class="library-songs-list">
+                 <ul>
+                 </ul>
+                </div>
             </div>
             <div class="right">
                <div class="spotifyArtists">
@@ -62,17 +66,15 @@
                                <p>Artist</p>
                            </section>
                            <div class="play">
-                            <img src="play-button-arrowhead.svg" alt="play">
+                            <img src="/images/play-button-arrowhead.svg" alt="play">
                            </div>
                        </div>
                    </div>
                    <div class="playbar">
-                    <div class="songs-info">
-                    </div>
                     <div class="song-buttons">
-                    <img src="rewind-button.svg" alt="previous">
-                    <img src="play.svg" alt="play">
-                    <img src="next.svg" alt="next">
+                    <img src="/images/rewind-button.svg" alt="previous">
+                    <img id="playSong" src="/images/play.svg" alt="play">
+                    <img src="/images/next.svg" alt="next">
                     </div>
                    </div>
                </div>

@@ -139,7 +139,11 @@ nav img:hover,.user-logo:hover{
     margin-right: 0.4rem;
     background-color: var(--divbackground);
     border-radius: 10px;
+    /* border: 1px solid red; */
 }
+/* .left::-webkit-scrollbar{
+    display: none;
+} */
 .left > ul{
     display: flex;
     justify-content: space-between;
@@ -156,9 +160,6 @@ nav img:hover,.user-logo:hover{
     background-color: var(--divbackground);
     max-height: 89vh;
     position: relative;
-}
-::-webkit-scrollbar{
-    /* width: 10px; */
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 10px ;
@@ -229,9 +230,47 @@ nav img:hover,.user-logo:hover{
     justify-content: center;
     align-items: center;
 }
-.song-buttons{
-    margin: 0px 1rem;
-}
 .song-buttons > img{ 
     width: 1.5rem;
+    padding: 0px .5rem ;
+    cursor: pointer;
+}
+
+.song-card{
+    padding: 1rem 1rem;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 6fr 1fr;
+    cursor: pointer;
+    margin: .5rem 1rem;
+}
+.song-card:hover{
+    background-color: #202020;
+    transform: scale(1.01);
+}
+.song-card img{
+    width: 1.5rem;
+}
+.song-card img:last-child{
+    justify-self: end;
+}
+.song-info{
+    justify-self: start;
+}
+.song-info h5{
+    margin-bottom: 5px;
+}
+
+.library-songs-list {
+    height: 75%;
+}
+.library-songs-list ul{
+    overflow: auto;
+    height: 100%;
+}
+.library-songs-list ul::-webkit-scrollbar{
+    display: none;
 }
