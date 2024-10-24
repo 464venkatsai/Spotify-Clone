@@ -186,7 +186,8 @@ nav img:hover,.user-logo:hover{
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 1rem;
-    max-height: 69vh;
+    max-height: 60vh;
+    overflow: auto;
 }
 .cardContainer::-webkit-scrollbar{
     display: none;
@@ -194,6 +195,7 @@ nav img:hover,.user-logo:hover{
 .card{
     border-radius: 8px;
     width: max-content;
+    gap: 1rem;
     padding: 1rem;
     position: relative;
     cursor: pointer;
