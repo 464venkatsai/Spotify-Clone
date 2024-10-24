@@ -219,23 +219,33 @@ nav img:hover,.user-logo:hover{
     right: 2rem;
 }
 .playbar{
-    border: 0.1px solid wheat;
     left: 0;
     right: 0;
     position: absolute;
-    padding: 12px 1rem;
+    padding: 1rem 1rem;
     bottom: 0;
-    background-color: lightgreen;
+    background-color:rgb(30, 30, 30);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    z-index: 1;
+}
+.playbar section{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1.5fr;
+    margin-bottom: .5rem;
+}
+.song-buttons{
+    display: flex;
 }
 .song-buttons > img{ 
     width: 1.5rem;
     padding: 0px .5rem ;
     cursor: pointer;
+    margin-bottom: .5rem;
 }
-
 .song-card{
     padding: 1rem 1rem;
     border: 1px solid whitesmoke;
@@ -259,6 +269,8 @@ nav img:hover,.user-logo:hover{
 }
 .song-info{
     justify-self: start;
+    margin: 0px 1rem;
+
 }
 .song-info h5{
     margin-bottom: 5px;
@@ -273,4 +285,36 @@ nav img:hover,.user-logo:hover{
 }
 .library-songs-list ul::-webkit-scrollbar{
     display: none;
+}
+.seek-bar{
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    background-color: #454545;
+}
+.circle{
+    width: .7rem;
+    border-radius: 100%;
+    height: .7rem;
+    background-color: white;
+    position: absolute;
+    top: -5px;
+    left: 0%;
+    transition: left 0.01s;
+}
+
+.seek-color{
+    background-color: aqua;
+    width: 0%;
+    height: 3px;
+}
+.current-song-info{
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.current-song-info p{
+    font-size: xx-small;
 }

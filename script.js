@@ -7,7 +7,7 @@ async function getSongs(){
     let array = div.getElementsByTagName("a")
     for (let index = 0; index < array.length; index++) {
         const element = array[index];
-        if(element.href.endsWith("mp3") || element.href.endsWith("m4a")){
+        if(element.href.endsWith("mp3") || element.href.endsWith("m4a") || element.href.endsWith("mp4")){
             songs.push(element.href)
         }
     }
@@ -51,33 +51,54 @@ function createSongCard(song_name,artist_name,index){
     document.querySelector(".library-songs-list ul").appendChild(card)
 }
 
+let currentSong;
 async function main(){
     let songs = await getSongs() 
-    for (let index = 0; index < 10; index++){
+    currentSong = new Audio(songs[0])
+    for (let index = 0; index < songs.length; index++){
         let song_name = songs[index].split("/songs/")[1].split(".")[0].replaceAll("%20"," ") 
         createSongCard(song_name,"Venkat Sai",index)
     }
+    let currentSongCard = document.getElementsByClassName("song-card")[0]
+    document.querySelector(".current-song-info h5").textContent = currentSongCard.querySelector("h5").textContent
+    document.querySelector(".current-song-info p").textContent = currentSongCard.querySelector("h6").textContent
     document.querySelectorAll(".song-card").forEach(card => {
         card.addEventListener("click",(event)=>{
             let songIndex = event.currentTarget.getAttribute("song-index")
-            if (window.currentAudio && !window.currentAudio.paused){
-                window.currentAudio.pause()
-
+            let currentSongCard = event.currentTarget
+            document.querySelector(".current-song-info h5").textContent = currentSongCard.querySelector("h5").textContent
+            document.querySelector(".current-song-info p").textContent = currentSongCard.querySelector("h6").textContent
+            if (currentSong && !currentSong.paused){
+                currentSong.pause()
             }
-            window.currentAudio = new Audio(songs[songIndex])
-            window.currentAudio.play()
+            currentSong.src = songs[songIndex]
+            console.log(currentSong);
+            currentSong.play()
             document.getElementById("playSong").setAttribute("src","/images/pause.svg")
         })
     });
     document.getElementById("playSong").addEventListener("click",()=>{
         let playPause = document.getElementById("playSong");
-        if(window.currentAudio && !window.currentAudio.paused){
-            window.currentAudio.pause()
+        if(currentSong && !currentSong.paused){
+            currentSong.pause()
             playPause.setAttribute("src","/images/play.svg")
         }else{
-            window.currentAudio.play()
+            currentSong.play()
             playPause.setAttribute("src","/images/pause.svg")
         }
+    })
+    let seekbar = document.querySelector(".seek-bar");
+    let circle = document.querySelector(".circle");
+    let songPlayed = document.querySelector(".seek-color")
+    currentSong.addEventListener("timeupdate",()=>{
+        let songTime = (currentSong.currentTime/currentSong.duration)*100
+        circle.style.left = `${songTime}%`
+        songPlayed.style.width = `${songTime}%`;
+    })
+    seekbar.addEventListener("click",(e)=>{
+        let songTime = (e.offsetX/e.target.getBoundingClientRect().width)*100
+        document.querySelector(".circle").style.left = `${songTime}%`
+        currentSong.currentTime = (currentSong.duration*songTime)/100;
     })
 }
 main()
