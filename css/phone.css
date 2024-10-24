@@ -1,0 +1,31 @@
+@media (max-width: 960px) {
+    .left{
+        position: absolute;
+        left: -100%;
+        transition: all 1s !important   ;
+        z-index: 3;
+    }
+    header{
+        padding: 0px 1rem;
+    }
+    .library-songs-list{
+        height: 90%;
+    }
+    nav{
+        height: 2.5rem;
+    }
+    main{
+        padding: 0px .5rem;
+    }
+    .navbar-items{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+        align-items: center;
+    }
+    .hamburger img{
+        width: 2rem;
+        height: 2rem;
+    }
+}

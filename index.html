@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/phone.css">
     <link rel="shortcut icon" href="https://open.spotify.com/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="hamburger">
+                <img class="invert" src="images/hamburger.svg" alt="">
+            </ul>
+            <ul class="navbar-items">
                 <li class="flex align-center"><img src="/images/logo.svg" alt="spotify-logo">Spotify</li>
                 <li>
                     <div class="nav-widgets flex">
@@ -59,7 +63,77 @@
                <div class="spotifyArtists">
                    <h1>Spotify Artists</h1>
                    <div class="cardContainer">
-                       <div class="card">
+                       <div data-folder="Liked_Songs" class="card">
+                           <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                           <section class="cardDetails">
+                               <h2>Pritam</h2>
+                               <p>Artist</p>
+                           </section>
+                           <div class="play">
+                            <img src="/images/play-button-arrowhead.svg" alt="play">
+                           </div>
+                       </div>
+                       <div data-folder="Top_Hits" class="card">
+                           <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                           <section class="cardDetails">
+                               <h2>Pritam</h2>
+                               <p>Artist</p>
+                           </section>
+                           <div class="play">
+                            <img src="/images/play-button-arrowhead.svg" alt="play">
+                           </div>
+                       </div>
+                       <div data-folder="Liked_Songs" class="card">
+                           <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                           <section class="cardDetails">
+                               <h2>Pritam</h2>
+                               <p>Artist</p>
+                           </section>
+                           <div class="play">
+                            <img src="/images/play-button-arrowhead.svg" alt="play">
+                           </div>
+                       </div>
+                       <div data-folder="Top_Hits" class="card">
+                           <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                           <section class="cardDetails">
+                               <h2>Pritam</h2>
+                               <p>Artist</p>
+                           </section>
+                           <div class="play">
+                            <img src="/images/play-button-arrowhead.svg" alt="play">
+                           </div>
+                       </div>
+                       <div data-folder="Liked_Songs" class="card">
+                           <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                           <section class="cardDetails">
+                               <h2>Pritam</h2>
+                               <p>Artist</p>
+                           </section>
+                           <div class="play">
+                            <img src="/images/play-button-arrowhead.svg" alt="play">
+                           </div>
+                       </div>
+                       <div data-folder="Top_Hits" class="card">
+                           <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                           <section class="cardDetails">
+                               <h2>Pritam</h2>
+                               <p>Artist</p>
+                           </section>
+                           <div class="play">
+                            <img src="/images/play-button-arrowhead.svg" alt="play">
+                           </div>
+                       </div>
+                       <div data-folder="Liked_Songs" class="card">
+                           <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                           <section class="cardDetails">
+                               <h2>Pritam</h2>
+                               <p>Artist</p>
+                           </section>
+                           <div class="play">
+                            <img src="/images/play-button-arrowhead.svg" alt="play">
+                           </div>
+                       </div>
+                       <div data-folder="Top_Hits" class="card">
                            <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
                            <section class="cardDetails">
                                <h2>Pritam</h2>
@@ -72,15 +146,18 @@
                    </div>
                    <div class="playbar">
                         <section>
-                            <div class="current-info">
+                            <div class="current-song-info">
                                 <h5></h5>
                                 <p></p>
                             </div>
                             <div class="song-buttons">
-                                <img class="invert" src="/images/rewind-button.svg" alt="previous">
+                                <img class="invert" id="previous" src="/images/rewind-button.svg" alt="previous">
                                 <img class="invert" id="playSong" src="/images/play.svg" alt="play">
-                                <img class="invert" src="/images/next.svg" alt="next">
+                                <img class="invert" id="next" src="/images/next.svg" alt="next">
                             </div>
+                            <h6>
+                                2:15 / 3:15
+                            </h6>
                         </section>
                         <div class="seek-bar">
                             <div class="seek-color"></div>
@@ -92,5 +169,5 @@
         </div>
     </main>
 </body>
-<script src="script.js"></script>
+<script src="javascript/script.js"></script>
 </html>
