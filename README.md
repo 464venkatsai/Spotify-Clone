@@ -1,5 +1,11 @@
 ## 🚀 Spotify Clone 
+<h3 align="center">
+  Live Website At -
+  <a href="https://venkatsai464spotifyclone.freewebhostmost.com/" title="Spotify Clone">Spotify Clone</a>
+</h3>
 <img src="/images/spotify clone.png">
+
+**This is also responsive website**
 
 ## 🌐 Overview
 This project is a Spotify clone that replicates key high-level features of the original Spotify website. I focused on implementing essential functionality, such as user authentication, music streaming, playlists, and search capabilities to provide a similar user experience to Spotify. The project combines front-end and back-end development to mirror Spotify’s interface and interactive design, allowing users to enjoy music streaming and create personalized playlists, much like on the original platform. This clone demonstrates my understanding of web development, including handling complex functionality and providing smooth, user-friendly navigation.
@@ -12,6 +18,18 @@ This project is a Spotify clone that replicates key high-level features of the o
 - 📕 `index.html` : This is base file of the project
 - 📗 `Readme` : This file provides the overview of the repository. 
 
+## 📋 Clone Repository
+To clone this repository you only need Git installed in your system (Globally). Git not installed ? Download Git From Offical Site
+
+Open a VScode in the folder to get started
+In terminal enter git clonehttps://github.com/464venkatsai/Spotify-Clone.git .
+Install Live server extentision
+Right click and open with live server
+Run the app in the development mode.
+Open http://127.0.0.1:5500/index.html to view it in the browser.
+The page will reload if you make edits.
+
+🤝 If this project helps show your gratidude by staring and sharing repository.
 ## 🙌 Want to contribute?
 We are open to all kinds of contributions. If you want to:
 - 🤔 Suggest a feature
