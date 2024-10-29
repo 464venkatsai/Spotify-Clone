@@ -22,12 +22,12 @@ This project is a Spotify clone that replicates key high-level features of the o
 To clone this repository you only need Git installed in your system (Globally). Git not installed ? Download Git From Offical Site
 
 Open a VScode in the folder to get started
-In terminal enter git clonehttps://github.com/464venkatsai/Spotify-Clone.git .
-Install Live server extentision
-Right click and open with live server
-Run the app in the development mode.
-Open http://127.0.0.1:5500/index.html to view it in the browser.
-The page will reload if you make edits.
+- In terminal enter git clone https://github.com/464venkatsai/Spotify-Clone.git .
+- Install Live server extentision
+- Right click and open with live server
+- Run the app in the development mode.
+- Open http://127.0.0.1:5500/index.html to view it in the browser.
+- The page will reload if you make edits.
 
 🤝 If this project helps show your gratidude by staring and sharing repository.
 ## 🙌 Want to contribute?
