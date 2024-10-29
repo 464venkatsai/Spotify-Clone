@@ -1,6 +1,6 @@
 // Fetching All Songs From The Folder
 async function getSongs(folder) {
-    let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/`)
+    let a = await fetch(`/songs/${folder}/`)
     let respose = await a.text()
     let div = document.createElement("div")
     div.innerHTML = respose
@@ -17,7 +17,7 @@ async function getSongs(folder) {
 
 async function getAlbums() {
     // Fetching Albums
-    let a = await fetch("http://127.0.0.1:5500/songs/")
+    let a = await fetch("/songs/")
     let respose = await a.text()
     let div = document.createElement("div")
     div.innerHTML = respose
@@ -25,9 +25,9 @@ async function getAlbums() {
     let array = div.getElementsByTagName("a")
     let container = document.querySelector(".cardContainer");
     Array.from(array).forEach(async e => {
-        if (e.href.includes("/songs/")) {
+        if (e.href.includes("/songs/") && !e.href.includes(".htaccess")) {
             let folder = e.href.split("/songs/")[1]
-            let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`)
+            let a = await fetch(`/songs/${folder}/info.json`)
             let respose = await a.json()
             console.log(respose);
             createAlbumCard(respose.imageURL,respose.title,respose.description,folder);
@@ -208,4 +208,3 @@ async function main() {
     });
 }
 main()
-
