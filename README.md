@@ -5,7 +5,7 @@
 </h3>
 <img src="/images/spotify clone.png">
 
-**This is also responsive website**
+🌟🌟 **This is also responsive website**
 
 ## 🌐 Overview
 This project is a Spotify clone that replicates key high-level features of the original Spotify website. I focused on implementing essential functionality, such as user authentication, music streaming, playlists, and search capabilities to provide a similar user experience to Spotify. The project combines front-end and back-end development to mirror Spotify’s interface and interactive design, allowing users to enjoy music streaming and create personalized playlists, much like on the original platform. This clone demonstrates my understanding of web development, including handling complex functionality and providing smooth, user-friendly navigation.
